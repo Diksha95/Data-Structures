@@ -38,7 +38,7 @@ class KnapsackPblm
         int j=W;
         for(int i=n;i>0 && res>0;i--)
         {
-            if(res==X[i-1][j])
+            if(res==X[i-1][j]) //ith element is not included
                 continue;
             else
                 System.out.print(wt[i-1]+" ");
