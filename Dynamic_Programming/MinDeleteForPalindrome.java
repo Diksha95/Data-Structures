@@ -1,5 +1,6 @@
 /* Minimum number of deletions to make a string palindrome.Given a string of size ‘n’.The task is to remove or 
-delete minimum number of characters from the string so that the resultant string is palindrome. */
+delete minimum number of characters from the string so that the resultant string is palindrome.
+This question is same as number of insertions required to make a string palindrome */
 public class MinDeleteForPalindrome {
     
     public static void main(String[] args) {
