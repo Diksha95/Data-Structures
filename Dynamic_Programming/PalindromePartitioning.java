@@ -1,21 +1,18 @@
 /* Given a string, a partitioning of the string is a palindrome partitioning if every substring of the 
 partition is a palindrome. 
 Example:
-  “aba|b|bbabb|a|b|aba” is a palindrome partitioning of “ababbbabbababa”. 
-    
+ �a|babbbab|b|ababa� is a palindrome partitioning of "ababbbabbababa".     
   Problem Statement Link : https://www.geeksforgeeks.org/palindrome-partitioning-dp-17/  
   */
 public class PalindromePartitioning {
     static int t[][]=new int[1001][1001];
     public static void main(String[] args) {
         String s ="ababbbabbababa";
-        //char ch[]=s.toCharArray();
         System.out.println("The min no of palindrome partitions required are :"+palindromePartition(s,0,s.length()-1));
     }
 
     static int palindromePartition(String s,int i,int j)
     {
-       // String s=new String(ch);
         int min=Integer.MAX_VALUE;  
         int left,right;
         for(int m=0;m<1001;m++)
@@ -48,7 +45,6 @@ public class PalindromePartitioning {
             if(temp < min)
             min = temp;
         }
-        //System.out.println("Code reached upto here 2");
         return t[i][j]=min;
      
     }
