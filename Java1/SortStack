@@ -1,0 +1,5 @@
+import java.util.*;
+class SortStack
+{
+	static void sortInsert(char x)
+}

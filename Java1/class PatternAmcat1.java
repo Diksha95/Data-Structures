@@ -1,0 +1,5 @@
+class PatternAmcat1
+{
+	
+	
+}
