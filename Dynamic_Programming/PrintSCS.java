@@ -1,9 +1,10 @@
+/* https://leetcode.com/problems/shortest-common-supersequence/ */
 public class PrintSCS {
 
     public static void main(String[] args) {
-        String x="acbcf";
+        String x="abac";
         int n=x.length();
-        String y="abcdaf";
+        String y="cab";
         int m=y.length();   
         printSCS(x, y, n, m);
       
@@ -67,6 +68,15 @@ public class PrintSCS {
                     }
                 }               
             }
+			while(b>0){
+				result.append(Y[b-1]);
+				b--;
+			}	
+			while(a>0){
+				result.append(X[a-1]);
+				a--;
+			}
+			
             String scs=result.reverse().toString();
             System.out.println("The exepcted SCS is :"+scs);
     }

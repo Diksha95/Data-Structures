@@ -1,3 +1,6 @@
+/* Problem Statement - https://www.geeksforgeeks.org/subset-sum-problem-dp-25/ 
+Time Complexity =O(sum*n) 
+Space Complexity = O(sum*n) since we are using 2-d arrays*/
 class SubsetSumPblm
 {
     public static void main(String[] args) {

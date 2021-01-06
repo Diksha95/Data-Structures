@@ -1,5 +1,4 @@
-/* To count all the possible paths from top left to bottom right of a mXn matrix with the constraints 
-that from each cell you can either move only to right or down. */
+/* https://practice.geeksforgeeks.org/problems/count-all-possible-paths-from-top-left-to-bottom-right/0 */
 import java.util.*;
 public class CountAllPaths {
 

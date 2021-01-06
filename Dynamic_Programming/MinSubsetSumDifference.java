@@ -11,10 +11,6 @@ public class MinSubsetSumDifference {
         boolean t[][]=new boolean [n+1][range+1]; 
         subsetPblm(arr,range,t);
     }
-    static int mini(int a,int b)
-    {
-        return a<b?a:b;
-    }
     static void subsetPblm(int arr[],int range,boolean t[][])
     {
         int n=arr.length;
@@ -41,15 +37,14 @@ public class MinSubsetSumDifference {
             }
             int min=Integer.MAX_VALUE;
             //It will find out the largest value of j which will give minimum difference
-            for(int j=(range)/2;j>=0;j--)
-            {
-                if(t[n][j]==true)
-                  {
-                    min=range-2 * j;
-                    break;
-                  } 
-                   
-            }
+           int min=Integer.MAX_VALUE;
+            for(int k=0;k<range/2;k++){
+				
+				if( t[arr.length][k]==true)
+				{
+					min=Math.min(min,range - 2 * k );
+				}
+			}
             System.out.println(min);
     }
 }
