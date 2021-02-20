@@ -1,3 +1,7 @@
+/* Recurrence Relation =>  T(n) =2T(n/2)+1
+Complexity of this program is 0(n) 
+https://leetcode.com/problems/maximum-depth-of-binary-tree/ LEETCODE Problem -104
+*/
 public class MaxHeightofBT {
 
     static class Node{
