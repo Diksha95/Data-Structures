@@ -22,6 +22,7 @@ class FirstNegativeNo {
         sc.close();
 	}
 	
+	//Second approach to same problem
 	public static void firstNegative(int arr[],int N,int k){
 	    
 		// N-K+1 is the size of the resulting negative list
@@ -48,5 +49,42 @@ class FirstNegativeNo {
 		System.out.print("0 ");
 	   }
 	   
+	}
+	
+	public static List<Integer> getFirstNegative(int arr[],int K){
+	
+		List<Integer> list = new ArrayList<>();
+		List<Integer> result = new ArrayList<>();
+		
+		int i = 0,j=0;
+		while(j<arr.length){
+			
+			if(arr[j]<0){
+				list.add(arr[j]);
+			}
+			if(j-i+1<K){
+				j++;
+			}
+			
+			else if(j-i+1==K){
+				
+				//list.stream().forEach(System.out::println);
+				if(list.size()==0){
+					
+					result.add(0);
+				}
+				else{
+					
+					result.add(list.get(0));
+					//System.out.println("First list element"+list.getFirst());
+					if(arr[i] == list.get(0)) {
+						list.remove(0);
+					}
+				}
+				i++;
+				j++;
+			}
+		}
+		return result;
 	}
 }

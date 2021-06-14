@@ -28,7 +28,7 @@ class KnapsackPblm
 
                 else if(wt[i-1]<=j)
                 {
-                    X[i][j]=max(v[i-1] + X[i-1] [j-wt[i-1] ], X[i-1][j]);
+                    X[i][j]=max(v[i-1] + X[i-1] [j-wt[i-1]], X[i-1][j]);
                 }
                 else
                 X[i][j]=X[i-1][j];
