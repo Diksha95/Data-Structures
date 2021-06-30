@@ -1,3 +1,4 @@
+import java.util.*;
 class MergeSortedArrays{
 
 	public static void main(String args[]){
@@ -5,7 +6,8 @@ class MergeSortedArrays{
 		int arr1[] = {1, 3, 4, 5};
 		int arr2[] = {2, 4, 6, 8};
 		
-		mergeSortedArrays(arr1,arr2);
+		//mergeSortedArrays(arr1,arr2);
+		merge(arr1,arr2);
 	}
 
 	public static void mergeSortedArrays(int arr1[],int arr2[]){
@@ -39,5 +41,44 @@ class MergeSortedArrays{
 			System.out.print(arr3[a]+" ");
 		}
 	}
-
+	//Time Complexity O(n+mlog(n+m))
+	public static void merge(int arr1[],int arr2[]){
+		
+		int n = arr1.length;
+		int m = arr2.length;
+		
+		int i = n-1;
+		int j = 0;
+		
+		while(i>0 && j<m){
+			
+			if(arr1[i] > arr2[j]){
+				
+				int temp = arr1[i];
+				arr1[i] = arr2[j];
+				arr2[j] = temp;
+				i--;
+				j++;
+			}else{
+				break;
+			}
+		}
+		//at this point both the arrays have numbers but not in correct order
+		Arrays.sort(arr1);
+		Arrays.sort(arr2);
+		
+		for(int k:arr1){
+			System.out.print(k + " ");
+		}
+		for(int k:arr2){
+			System.out.print(k + " ");
+		}
+	}
+	
+	public static void swap(int a,int b){
+		
+		int temp = a;
+		a = b;
+		b = temp;
+	}
 }
